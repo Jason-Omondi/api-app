@@ -24,8 +24,7 @@ This Flutter app serves as a comprehensive demonstration of the API lifecycle, s
 
 5. Explore the app's functionalities, observe how HTTP requests are made, and how the app responds to various API lifecycle events.
 
-6. Dependencies:
-> The app utilizes the http package, which simplifies making HTTP requests and handling responses. The version used in this project is specified in the pubspec.yaml file.
+6. Dependencies: The app utilizes the http package, which simplifies making HTTP requests and handling responses. The version used in this project is specified in the pubspec.yaml file.
 
 
 A few resources to get you started if this is your first Flutter project:
