@@ -5,7 +5,7 @@ This Flutter app serves as a comprehensive demonstration of the API lifecycle, s
 ## API Lifecycle Demonstration App with Flutter and HTTP Library
 
 ### Features:
-GET Method: Fetch and display data from the API endpoint using HTTP GET requests. The retrieved data will be presented in a user-friendly manner within the app's interface.
+> GET Method: Fetch and display data from the API endpoint using HTTP GET requests. The retrieved data will be presented in a user-friendly manner within the app's interface.
 
 > POST Method: Allow users to create new items by sending HTTP POST requests to the API. Users can enter relevant information through the app's interface, and the new data will be added to the API.
 
@@ -14,18 +14,17 @@ GET Method: Fetch and display data from the API endpoint using HTTP GET requests
 > DELETE Method: Enable users to remove items from the API through HTTP DELETE requests. A simple swipe-to-delete functionality in the app's UI allows easy deletion of items.
 
 ### How to Use:
-Clone this repository and open the Flutter project in your preferred IDE.
+1. Clone this repository and open the Flutter project in your preferred IDE.
 
-Make sure you have the necessary dependencies by running flutter pub get in the project directory.
+2. Make sure you have the necessary dependencies by running flutter pub get in the project directory.
 
-Modify the API endpoint URL in the app to match your desired API. You can find the API URLs in the respective methods' implementations.
+3. Modify the API endpoint URL in the app to match your desired API. You can find the API URLs in the respective methods' implementations.
 
-Build and run the app on your preferred device or emulator.
+4. Build and run the app on your preferred device or emulator.
 
-Explore the app's functionalities, observe how HTTP requests are made, and how the app responds to various API lifecycle events.
+5. Explore the app's functionalities, observe how HTTP requests are made, and how the app responds to various API lifecycle events.
 
-> Dependencies:
-The app utilizes the http package, which simplifies making HTTP requests and handling responses. The version used in this project is specified in the pubspec.yaml file.
+6. Dependencies: The app utilizes the http package, which simplifies making HTTP requests and handling responses. The version used in this project is specified in the pubspec.yaml file.
 
 
 A few resources to get you started if this is your first Flutter project:
