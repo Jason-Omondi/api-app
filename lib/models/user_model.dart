@@ -12,7 +12,7 @@ class Welcome {
     DateTime? createdAt;
     String? name;
     String? avatar;
-    String id;
+    String? id;
     List<Qualification>? qualifications;
     String? query;
     String? username;
@@ -43,7 +43,7 @@ class Welcome {
         this.createdAt,
         this.name,
         this.avatar,
-        required this.id,
+        this.id,
         this.qualifications,
         this.query,
         this.username,

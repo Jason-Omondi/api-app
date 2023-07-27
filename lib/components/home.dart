@@ -1,7 +1,9 @@
 
 import 'package:apiapp/components/app_button.dart';
+import 'package:apiapp/models/user_model.dart';
 import 'package:apiapp/services/remote_client.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -26,25 +28,25 @@ class HomePage extends StatelessWidget {
                   if (response == null) return;
                   debugPrint('successful:');
 
-                  //var users = userFromJson(response);
-                  debugPrint('Users count: '
-                   //+ users.length.toString()
+
+                  var users = welcomeFromJson(response);
+                  debugPrint('Users count: ${users.length}'
                    );
                 },
-              ),/*
+              ),
               AppButton(
                 operation: 'POST',
                 operationColor: Colors.lightBlue,
                 description: 'Add user',
                 onPressed: () async {
-                  var user = User(
+                  var user = Welcome(
                     name: 'Jason Houdini',
                     qualifications: [
                       Qualification(degree: 'Master', completionData: '01-01-2025'),
                     ],
                   );
 
-                  var response = await BaseClient().post('/users', user).catchError((err) {});
+                  var response = await BaseClient().post('/users', ).catchError((err) {});
                   if (response == null) return;
                   debugPrint('successful:');
                 },
@@ -55,14 +57,14 @@ class HomePage extends StatelessWidget {
                 description: 'Edit user',
                 onPressed: () async {
                   var id = 2;
-                  var user = User(
+                  var user = Welcome(
                     name: 'Jason Houdini',
                     qualifications: [
                       Qualification(degree: 'Ph.D', completionData: '01-01-2028'),
                     ],
                   );
 
-                  var response = await BaseClient().put('/users/$id', user).catchError((err) {});
+                  var response = await BaseClient().put('/users/$id',).catchError((err) {});
                   if (response == null) return;
                   debugPrint('successful:');
                 },
@@ -78,7 +80,7 @@ class HomePage extends StatelessWidget {
                   debugPrint('successful:');
                 },
               ),
-            */],
+            ],
           ),
         ),
       ),
