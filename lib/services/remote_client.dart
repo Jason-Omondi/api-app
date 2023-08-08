@@ -16,12 +16,12 @@ class BaseClient {
     //convert server url to uri inorder to send http request to the backend server
     //string api is the endpoint of the backend api service eg users/ database etc/
     var url = Uri.parse(baseUrl + api);
-    var _headers = { //because server requires this information for authentication
+    var headers = { //because server requires this information for authentication
       'Authorization': 'Bearer sfie328370428387=',
       'api_key': 'ief873fj38uf38uf83u839898989',
     };
     
-    var resp = await httpClient.get(url, headers: _headers); //capture the response by server
+    var resp = await httpClient.get(url, headers: headers); //capture the response by server
     if (resp.statusCode == 200) {//check the status code of the body
       //isLoading = false;
       /*Fluttertoast.showToast(

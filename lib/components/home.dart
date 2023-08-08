@@ -3,7 +3,7 @@ import 'package:apiapp/components/app_button.dart';
 import 'package:apiapp/models/user_model.dart';
 import 'package:apiapp/services/remote_client.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -30,10 +30,11 @@ class HomePage extends StatelessWidget {
 
 
                   var users = welcomeFromJson(response);
-                  debugPrint('Users count: ${users.length}'
+                  debugPrint('Users count: ${users.length.toString()}'
                    );
                 },
-              ),
+              ), 
+
               AppButton(
                 operation: 'POST',
                 operationColor: Colors.lightBlue,
@@ -79,7 +80,7 @@ class HomePage extends StatelessWidget {
                   if (response == null) return;
                   debugPrint('successful:');
                 },
-              ),
+              ), 
             ],
           ),
         ),
