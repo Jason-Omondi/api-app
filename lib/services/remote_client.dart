@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 
 const String baseUrl = 'https://631c37911b470e0e12fcdd0b.mockapi.io/api'; //domain
@@ -52,13 +53,21 @@ Fluttertoast.showToast(
     */
     }      }
 
+    Future<dynamic> post(String api, dynamic object) async {
+    var url = Uri.parse(baseUrl + api);
+    var _payload = json.encode(object);
+    var _headers = {
+      'Authorization': 'Bearer sfie328370428387=',
+      'Content-Type': 'application/json',
+      'api_key': 'ief873fj38uf38uf83u839898989',
+    };
 
-
-
-  
-
-  Future<dynamic> post(String api) async{
-
+    var response = await httpClient.post(url, body: _payload, headers: _headers);
+    if (response.statusCode == 201) {
+      return response.body;
+    } else {
+      //throw exception and catch it in UI
+    }
   }
 
   Future<dynamic> put(String api) async{

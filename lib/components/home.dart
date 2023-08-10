@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                     ],
                   );
 
-                  var response = await BaseClient().post('/users', ).catchError((err) {});
+                  var response = await BaseClient().post('/users', user).catchError((err) {});
                   if (response == null) return;
                   debugPrint('successful:');
                 },
